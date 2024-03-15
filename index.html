@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utility</title>
+  </head>
+  <body>
+    <form>
+      <label for="input">Input String</label>
+      <input type="text" name="stringVal" />
+      <br />
+
+      <input type="radio" class="operation" name="operation" value="first" />
+      Return the A-Z <br />
+      <input type="radio" class="operation" name="operation" value="second" />
+      Return the a-z<br />
+      <input type="radio" class="operation" name="operation" value="third" />
+      Return the 0-9<br />
+      <input type="radio" class="operation" name="operation" value="fourth" />
+      Return only special characters. <br />
+      <input type="radio" class="operation" name="operation" value="fifth" />
+      Return only vowels (a, e, i, o, u).<br />
+      <input type="radio" class="operation" name="operation" value="sixth" />
+      Return only consonants.<br />
+      <input type="radio" class="operation" name="operation" value="seventh" />
+      Print characters/digits at odd positions.<br />
+      <input type="radio" class="operation" name="operation" value="eighth" />
+      Print characters/digits at even positions.<br />
+      <input type="radio" class="operation" name="operation" value="ninth" />
+      Reverse the input.<br />
+      <input type="radio" class="operation" name="operation" value="tenth" />
+      Find the second last character/digit/number in the input.<br />
+
+      <br />
+      <input type="submit" class="btn" value="Submit" />
+    </form>
+
+    <div class="ans"></div>
+
+    <script>
+      const form = document.querySelector("form");
+      const ans = document.querySelector(".ans");
+
+      const stringVal = document.querySelector('.stringVal')
+
+      form.addEventListener(
+        "submit",
+        (e) => {
+          const data = new FormData(form);
+          let output = "";
+
+
+
+          for (const entry of data) {
+            output = `${output}${entry[0]}=${entry[1]}\r`;
+          }
+          ans.innerText = output;
+          e.preventDefault();
+        },
+        false
+      );
+      const btn = document.getElementsByClassName("btn");
+
+
+      ///////////////////////////////////////////
+
+    //   switch case logic
+
+    switch(ans){
+        
+    }
+     
+    </script>
+  </body>
+</html>
